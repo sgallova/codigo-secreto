@@ -1,13 +1,16 @@
 const express = require('express');
 const app = express();
 
+String.prototype.capitalize = function() {
+  return this.charAt(0).toUpperCase() + this.slice(1);
+}
 
-app.get('/', (req, res) => {
-  
-  var name=req.query.nombre || 'desconocido';
- 
-  var nombre='<h1>Hola '+name+'!</h1>';
-  res.send(nombre);
+
+app.get('/:name', (req, res) => {
+
+  var name=req.params.name || 'desconocido';
+ ;
+  res.send(`<h1>Hola ${name.capitalize()} !</h1>`);
   
 });
 
