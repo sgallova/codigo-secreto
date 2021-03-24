@@ -9,7 +9,6 @@ String.prototype.capitalize = function() {
 app.get('/:name', (req, res) => {
 
   var name=req.params.name || 'desconocido';
- ;
   res.send(`<h1>Hola ${name.capitalize()} !</h1>`);
   
 });
