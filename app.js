@@ -4,7 +4,7 @@ const app = express();
 
 app.get('/', (req, res) => {
   
-  var name=req.query.nombre || 'Desconocido';
+  var name=req.query.nombre || 'desconocido';
  
   var nombre='<h1>Hola '+name+'!</h1>';
   res.send(nombre);
