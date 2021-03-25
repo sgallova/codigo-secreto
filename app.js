@@ -1,7 +1,7 @@
 const express = require("express");
 const app = express();
 
-app.get('makers/:name', (req, res) => {
+app.get('/makers/:name', (req, res) => {
 
   String.prototype.capitalize = function() {
     return this.charAt(0).toUpperCase() + this.slice(1);
